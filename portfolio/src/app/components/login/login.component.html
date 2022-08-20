@@ -1,0 +1,42 @@
+<a routerLink="login" routerLinkActive="active" *ngIf="!authService.logIn" class="btn btn-primary">Acceder</a>
+<a onclick="logout()" class="btn btn-primary" *ngIf="authService.logIn">Salir</a>
+
+<!--
+    <button type="button" routerLink="login" routerLinkActive="active" *ngIf="!authService.logIn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login-modal">Acceder</button>
+    <button type="button" onclick="logout()" class="btn btn-primary" *ngIf="authService.logIn" data-bs-toggle="modal" data-bs-target="#login-modal">Salir</button>
+-->
+
+<!-- Modal -->
+<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="login-modal-label" aria-hidden="true" style="z-index: 9999;">
+    <!-- <form class="row g-3 needs-validation" novalidate> -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="login-modal-label">Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="user-input" class="form-label fw-bold">Usuario</label>
+                        <input type="text" class="form-control" id="user-input" required />
+                        <div class="invalid-feedback">
+                            Por favor ingrese un nombre de usuario.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password-input" class="form-label fw-bold">Contraseña</label>
+                        <input type="password" class="form-control" id="password-input" required />
+                        <div class="invalid-feedback">
+                            Por favor ingrese una contraseña.
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" type="submit" class="btn btn-primary">Iniciar</button>
+                </div>
+            </div>
+        </div>
+    <!-- </form> -->
+</div>

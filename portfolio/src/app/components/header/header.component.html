@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed w-100" style="z-index: 9999;">
+  <div class="container-fluid">
+    <div class="navbar-brand py-0" >
+      <button class="btn text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sections-menu"
+        aria-controls="offcanvasWithBackdrop">
+        <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+      </button>
+    </div>
+    <a id="ap-logo" class="flex-grow-1" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <fa-icon [icon]="['fas', 'ellipsis-vertical']"></fa-icon>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <app-social></app-social>
+        </li>
+        <li class="d-none d-lg-block d-xl-block text-white">
+          <div class="vr mx-2 h-100"></div>
+        </li>
+        <li class="nav-item">
+          <app-login></app-login>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start bg-dark text-light" data-bs-scroll="true"  tabindex="-1" id="sections-menu" aria-labelledby="sections-menu-label" style="width: 15rem; z-index: 9999;">
+  <div class="offcanvas-header">
+    <div></div>
+    <button type="button" class="btn-close bg-light text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="p-0 m-0" style="list-style: none; line-height: 3rem;">
+      <li>
+        <a href="#about-section" class="fs-4 text-light text-decoration-none">Acerca de</a>
+      </li>
+      <li>
+        <a href="#experience-section" class="fs-4 text-light text-decoration-none">Experiencia</a>
+      </li>
+      <li>
+        <a href="#education-section" class="fs-4 text-light text-decoration-none">Educación</a>
+      </li>
+      <li>
+        <a href="#skills-section" class="fs-4 text-light text-decoration-none">Habilidades</a>
+      </li>
+      <li>
+        <a href="#projects-section" class="fs-4 text-light text-decoration-none">Proyectos</a>
+      </li>
+    </ul>
+  </div>
+</div>
